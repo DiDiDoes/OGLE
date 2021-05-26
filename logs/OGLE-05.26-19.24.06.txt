@@ -1,0 +1,62 @@
+2021-05-26 19:24:06,939 OGLE -    INFO: ====================BEGIN: load data====================
+2021-05-26 19:24:06,940 OGLE -    INFO: Loading data from data\query_1621408997.07960f_startable.txt...
+2021-05-26 19:24:08,785 OGLE -    INFO: 639328 datapoint loaded.
+2021-05-26 19:24:08,858 OGLE -    INFO: Type summary:
+ECL      499203
+RRLyr    126146
+Cep       11623
+T2Cep      1969
+aCep        387
+Name: Type, dtype: int64
+2021-05-26 19:24:08,859 OGLE -    INFO: ====================BEGIN: clean data====================
+2021-05-26 19:24:08,861 OGLE -    INFO: 41 data cleaned for I.
+2021-05-26 19:24:08,937 OGLE -    INFO: 95009 data cleaned for V.
+2021-05-26 19:24:09,008 OGLE -    INFO: 0 data cleaned for V_I.
+2021-05-26 19:24:09,084 OGLE -    INFO: 17 data cleaned for P_1.
+2021-05-26 19:24:09,157 OGLE -    INFO: 0 data cleaned for T0_1.
+2021-05-26 19:24:09,226 OGLE -    INFO: 5 data cleaned for A_1.
+2021-05-26 19:24:09,299 OGLE -    INFO: 72 datapoint cleaned for P_1.
+2021-05-26 19:24:09,367 OGLE -    INFO: 1 datapoint cleaned for T0_1.
+2021-05-26 19:24:09,490 OGLE -    INFO: Type summary:
+ECL      448263
+RRLyr     83816
+Cep       10484
+T2Cep      1299
+aCep        321
+Name: Type, dtype: int64
+2021-05-26 19:24:09,490 OGLE -    INFO: ====================END: clean data====================
+2021-05-26 19:24:09,491 OGLE -    INFO: 544183 datapoint remain.
+2021-05-26 19:24:09,647 OGLE -    INFO: Summary of variables:
+                   I              V            V_I            P_1           T0_1            A_1
+count  544183.000000  544183.000000  544183.000000  544183.000000  544183.000000  544183.000000
+mean       17.644105      19.138786       1.494681       5.304289    6904.978908       0.412123
+std         1.276912       1.412039       0.759109      27.982089     298.031315       0.266896
+min        10.234000      11.314000      -2.454000       0.000000    6000.000000       0.003000
+25%        16.965000      18.369000       1.033000       0.422675    7000.109400       0.230000
+50%        17.908000      19.356000       1.497000       0.612256    7000.290700       0.359000
+75%        18.608000      20.109000       1.962000       1.685736    7000.701400       0.539000
+max        20.692000      22.630000       5.999000     989.651801    7830.470400       4.913000
+2021-05-26 19:24:09,655 OGLE -    INFO: ====================END: load data====================
+2021-05-26 19:24:09,679 OGLE -    INFO: Use 0.1 of all data for training.
+2021-05-26 19:24:09,679 OGLE -    INFO: Use 0.1 of all data for test.
+2021-05-26 19:24:09,769 OGLE -    INFO: ====================BEGIN: fit C-SVM model====================
+2021-05-26 19:24:09,769 OGLE -    INFO: Fitting C-SVM model...
+2021-05-26 19:24:30,391 OGLE -    INFO: Model fitted, time 20.6 s
+2021-05-26 19:24:30,392 OGLE -    INFO: ====================END: fit C-SVM model====================
+2021-05-26 19:24:30,392 OGLE -    INFO: ====================BEGIN: test C-SVM model====================
+2021-05-26 19:24:30,392 OGLE -    INFO: Testing C-SVM model...
+2021-05-26 19:24:42,152 OGLE -    INFO: Tested on train data (11.8 s)
+2021-05-26 19:24:42,153 OGLE -    INFO: Training acc 0.9312, confusion matrix:
+[[  955    90    29     1     0]
+ [    4 44475   352     2     0]
+ [  133  2994  5220     0     0]
+ [    4    95    14    25     0]
+ [   16     3     6     0     0]]
+2021-05-26 19:24:55,004 OGLE -    INFO: Tested on test data (12.9 s), , time 
+2021-05-26 19:24:55,005 OGLE -    INFO: Test acc 0.9326, confusion matrix:
+[[  931    69    26     1     0]
+ [    1 44651   358     1     0]
+ [  113  2980  5139     0     0]
+ [    3    76     9    29     0]
+ [   15     3    14     0     0]]
+2021-05-26 19:24:55,006 OGLE -    INFO: ====================END: test C-SVM model====================
